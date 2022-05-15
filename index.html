@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Japalaq weather</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div  class="header">
+        <div id="header_up"></div>
+        <div id="header_information">
+            <div id="main_information">
+                <div id="owl"></div>
+                <div class="uncheck" id="main_text">Japalaq weather</div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div id="main_window">
+            <div id="main_window_up">
+                <div id="form">
+                    <div class="uncheck" id="text_form">Поиск:</div>
+                        <input type="text" id="input">
+                        <button class="uncheck" id="butt_inpt" type="button" value="click" onclick="window.new_location();">✔</button>
+                </div>
+            </div>
+            <div id="main_div">
+                <div id="pre_texts">
+                    <div id="texts">
+                        <div id="text_0">Город: {city}</div>
+                        <div class="text_1" id="temperature">Температура сейчас: {temp} C</div>
+                        <div class="text_1" id="max_min_temp">Min-max температура: {min_temp}C ~ {max_temp}C</div>
+                        <div class="text_1" id="wind">Ветер: {wind} м/с</div>
+                        <div class="text_1" id="pressure">Давление: {pressure}</div>
+                        <div class="text_1" id="humidity">Влажность: {humidity}</div>
+                        <div class="text_1" id="visibility">Видимость: {visibility}</div>
+                    </div>
+                    <div id="weather_ico_platform">
+                        <img id="weather_ico"></img>
+                    </div>
+                </div>
+
+                <div id="list">
+                    <div class="uncheck" id="buttons_and_information">
+                        <div id="button0" type="button" value="click" onclick="window.dicrem();">&#8592;</div>
+                        <div id="info">Сегодня</div>
+                        <div id="button1" type="button" value="click" onclick="window.increm();">&#8594;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"><div class="uncheck">Used: OpenWeatherAPI</div></div>
+
+    <script src="JS.js" type="text/javascript">
+    </script>
+    <script>
+        let timer = setInterval(function() {
+            if(document.documentElement.clientWidth/1920 > document.documentElement.clientHeight/937){
+                document.body.style.zoom = document.documentElement.clientHeight/937;
+            }else{
+                document.body.style.zoom = document.documentElement.clientWidth/1920;
+            }
+        }, 20);
+    </script>
+</body>
+</html>
